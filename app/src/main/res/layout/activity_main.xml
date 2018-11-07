@@ -1,4 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -11,11 +15,11 @@
 
         <ImageView
             android:id="@+id/imageView4"
-            android:layout_width="match_parent"
-            android:layout_height="300dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
-            android:scaleType="fitXY"
-            android:contentDescription="@string/app_name"
+            android:adjustViewBounds="true"
+            android:contentDescription="@string/button1_name"
             app:srcCompat="@drawable/mushroom" />
 
 
@@ -27,6 +31,7 @@
         android:layout_below="@id/imageView4"
         android:layout_centerHorizontal="true"
         android:text="Mushroom Plant"
+        android:textColor="@color/white"
         android:textSize="20dp" />
 
     <Button
@@ -36,20 +41,58 @@
         android:layout_marginLeft="20dp"
         android:text="@string/button1_name"
         android:layout_below="@+id/textView"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="30dp"
+        android:textSize="30dp"
         android:layout_centerHorizontal="true"
-        android:background="@drawable/button_background"
-        android:shadowRadius="20dp"/>
+        android:textColor="@color/white"
+        android:background="@drawable/button_background"></Button>
 
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
+        android:layout_below="@id/button2"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="86dp"
+        android:textColor="@color/colorGreen"
+        android:layout_marginTop="20dp"
         android:text="Start Farming"
         android:textSize="20dp" />
 
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:text="How to start"
+        android:layout_below="@+id/textView2"
+        android:layout_marginTop="5dp"
+        android:layout_centerHorizontal="true"
+
+        ></Button>
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:text="Farm Calculator"
+        android:layout_below="@+id/button3"
+        android:layout_marginTop="0dp"
+        android:drawableLeft="@drawable/index"
+        android:layout_centerHorizontal="true"
+        ></Button>
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:text="Sell"
+        android:layout_below="@+id/button4"
+        android:layout_marginTop="0dp"
+        android:layout_centerHorizontal="true"
+        android:drawableLeft="@drawable/index2"
+
+        ></Button>
+
 
 </RelativeLayout>
+</ScrollView>
