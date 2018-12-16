@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/darkGreen"
+        tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="@string/farm_calculator"
+        android:textColor="@color/red"
+        android:textSize="20dp" />
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView"
+        android:id="@+id/table"
+        android:stretchColumns="*">
+
+        <!--First row -->
+        <TableRow
+            android:id="@+id/row1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+
+                android:id="@+id/expenses"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#D2DADD"
+                android:padding="18dip"
+                android:text="Expenses"
+                android:textColor="#000"
+                android:textSize="16dp" />
+
+            <TextView
+
+                android:id="@+id/expenses2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#b0b0b0"
+                android:padding="18dip"
+                android:text="UGX (Ush)"
+                android:textColor="#000"
+                android:textSize="16dp" />
+
+        </TableRow>
+
+        <!-- row 2 -->
+        <TableRow
+            android:id="@+id/row2"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+            <TextView
+
+                android:id="@+id/bags"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#D2DADD"
+                android:padding="18dip"
+                android:text="Bags"
+                android:textColor="#000"
+                android:textSize="16dp" />
+
+            <TextView
+
+                android:id="@+id/bags2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#b0b0b0"
+                android:padding="18dip"
+                android:text="500"
+                android:textColor="#000"
+                android:textSize="16dp" />
+        </TableRow>
+
+        <!-- row 3 -->
+        <TableRow
+            android:id="@+id/row3"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+            <TextView
+
+                android:id="@+id/seeds"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#D2DADD"
+                android:padding="18dip"
+                android:text="Seeds"
+                android:textColor="#000"
+                android:textSize="16dp" />
+
+            <TextView
+
+                android:id="@+id/seed2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#b0b0b0"
+                android:padding="18dip"
+                android:text="1000"
+                android:textColor="#000"
+                android:textSize="16dp" />
+        </TableRow>
+
+        <!-- row 4 -->
+        <TableRow
+            android:id="@+id/row4"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+            <TextView
+
+                android:id="@+id/cotton1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#D2DADD"
+                android:padding="18dip"
+                android:text="Cotton"
+                android:textColor="#000"
+                android:textSize="16sp" />
+
+            <TextView
+
+                android:id="@+id/cotton2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#b0b0b0"
+                android:padding="18dip"
+                android:text="1000"
+                android:textColor="#000"
+                android:textSize="16sp" />
+        </TableRow>
+
+    </TableLayout>
+
+    <TextView
+
+        android:id="@+id/calculator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/table"
+        android:padding="18dip"
+        android:text="@string/calculator"
+        android:textColor="#fff"
+        android:textSize="16sp" />
+
+    <EditText
+        android:id="@+id/measure"
+        style="@style/Widget.AppCompat.EditText"
+        android:layout_width="150dp"
+        android:layout_centerHorizontal="true"
+        android:hint="Here"
+        android:textColor="#fff"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/calculator"
+        android:layout_alignParentRight="true"/>
+
+
+
+    <Spinner
+        android:id="@+id/spinner1"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/measure"
+        android:layout_alignBaseline="@id/measure"
+        android:spinnerMode="dropdown"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:id="@+id/line"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/calculator"
+        android:background="@color/colorGreen" />
+
+    <TextView
+
+        android:id="@+id/possible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/line"
+        android:layout_centerHorizontal="true"
+        android:padding="18dip"
+        android:text="Possible Yields"
+        android:textColor="@color/red"
+        android:textSize="18sp" />
+
+    <TextView
+
+        android:id="@+id/mass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/possible"
+        android:layout_alignParentLeft="true"
+        android:padding="18dip"
+        android:text="Harvest : 3Kg"
+        android:textColor="#fff"
+        android:textSize="16sp" />
+
+    <TextView
+
+        android:id="@+id/profit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/mass"
+        android:layout_alignParentLeft="true"
+        android:padding="18dip"
+        android:text="Profit : 200K"
+        android:textColor="#fff"
+        android:textSize="16sp" />
+
+
+
+
+
+</RelativeLayout>

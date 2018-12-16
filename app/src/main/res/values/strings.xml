@@ -2,4 +2,9 @@
     <string name="app_name">kulimax</string>
     <string name="button1_name">Diagonise</string>
     <string name="mushroom_plant">Mushroom Plant</string>
+    <string name="farm_calculator">Farm Calculator</string>
+    <string name="calculator">
+        Enter your farm land size:</string>
+
+
 </resources>
