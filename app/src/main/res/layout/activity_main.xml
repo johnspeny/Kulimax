@@ -79,13 +79,13 @@
         android:id="@+id/button3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:text="How to start"
         android:layout_below="@+id/textView2"
-        android:layout_marginTop="5dp"
         android:layout_centerHorizontal="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="5dp"
+        android:onClick="how"
 
-        ></Button>
+        android:text="How to start"></Button>
 
     <Button
         android:id="@+id/button4"

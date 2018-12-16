@@ -50,6 +50,11 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void how(View view){
+        Intent intent = new Intent(this, Main5Activity.class);
+        startActivity(intent);
+    }
+
     public void farm(View view){
         Intent intent = new Intent(this, Main4Activity.class);
         startActivity(intent);

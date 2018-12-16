@@ -5,6 +5,13 @@
     <string name="farm_calculator">Farm Calculator</string>
     <string name="calculator">
         Enter your farm land size:</string>
+    <string name="how_to_start">1) Find some space</string>
+    <string name="how_to_start2">The size of the space you need depends on lots of factors like how many mushrooms you are aiming to grow.Example:</string>
 
+    <string name="how_to_start3">2) Design your space</string>
+    <string name="how_to_start33">There are so many different ways of designing your setup depending on the space you have and your budget, but I will show you some examples to help give you the general idea.</string>
+
+    <string name="how_to_start4">3) Start growing</string>
+    <string name="how_to_start44">Deposit money then farm equipments(number of seeds, cotton size) are delivered to you.</string>
 
 </resources>
