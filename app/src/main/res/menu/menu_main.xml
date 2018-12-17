@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/coins"
+        android:icon="@drawable/coin"
+        android:title="user"
+        app:showAsAction="always"
+        />
+
+
+    <!-- "Mark Favorite", should appear as action button if possible -->
+    <item
+        android:id="@+id/action_favorite"
+        android:icon="@drawable/user"
+        android:title="user"
+        app:showAsAction="always"
+        />
+
+
+
+
+
+</menu>
