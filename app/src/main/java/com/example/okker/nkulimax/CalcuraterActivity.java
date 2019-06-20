@@ -6,12 +6,12 @@ import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 
 
-public class Main4Activity extends AppCompatActivity {
+public class CalcuraterActivity extends AppCompatActivity {
     Spinner dropdown;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main4);
+        setContentView(R.layout.activity_calcurater);
         //get the spinner from the xml.
         dropdown = findViewById(R.id.spinner1);
 //create a list of items for the spinner.

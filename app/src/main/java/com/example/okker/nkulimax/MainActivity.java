@@ -74,7 +74,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void farm(View view){
-        Intent intent = new Intent(this, Main4Activity.class);
+        Intent intent = new Intent(this, CalcuraterActivity.class);
         startActivity(intent);
     }
 
