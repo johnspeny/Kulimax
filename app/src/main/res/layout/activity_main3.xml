@@ -18,12 +18,13 @@
 
     <ImageView
         android:id="@+id/imageView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="206dp"
         android:layout_below="@id/textViewA2"
+        android:layout_marginTop="8dp"
         android:adjustViewBounds="true"
         android:contentDescription="@string/button1_name"
-        app:srcCompat="@drawable/youtube" />
+        app:srcCompat="@drawable/play" />
 
     <TextView
         android:id="@+id/textViewA22"
