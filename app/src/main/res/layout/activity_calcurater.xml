@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/darkGreen"
         tools:context=".MainActivity">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
     <TextView
         android:id="@+id/titleView"
@@ -32,64 +35,44 @@
         android:id="@+id/est_amount"
         style="@style/Widget.AppCompat.EditText"
         android:layout_width="200dp"
-        android:layout_centerHorizontal="true"
-        android:hint="Here"
-        android:textColor="#fff"
         android:layout_height="wrap_content"
         android:layout_alignBaseline="@id/amount"
-        android:layout_alignParentRight="true"/>
-
-    <TextView
-
-        android:id="@+id/calculator"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/amount"
-        android:padding="18dip"
-        android:text="@string/calculator"
-        android:textColor="#fff"
-        android:textSize="16sp" />
-
-    <EditText
-        android:id="@+id/land_size"
-        style="@style/Widget.AppCompat.EditText"
-        android:layout_width="200dp"
+        android:layout_alignParentRight="true"
         android:layout_centerHorizontal="true"
         android:hint="Here"
-        android:textColor="#fff"
+        android:inputType="number"
+        android:textColor="#fff" />
+
+
+    <Button
+        android:id="@+id/cal_run_button"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@id/calculator"
-        android:layout_alignParentRight="true"/>
+        android:text="RUN"
+        android:padding="18dip"
+        android:layout_below="@+id/amount"
+        android:layout_centerHorizontal="true"/>
 
-
-
-    <Spinner
-        android:id="@+id/spinner1"
-        android:layout_width="50dp"
-        android:layout_height="wrap_content"
-        android:layout_alignRight="@+id/land_size"
-        android:layout_alignBaseline="@id/land_size"
-        android:spinnerMode="dropdown"/>
 
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:id="@+id/calc_line"
         android:layout_marginTop="0dp"
-        android:layout_below="@id/calculator"
+        android:layout_below="@id/cal_run_button"
         android:background="@color/colorGreen" />
 
-    <TextView
+        <TextView
 
-        android:id="@+id/calc_possible"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/calc_line"
-        android:layout_centerHorizontal="true"
-        android:padding="10dip"
-        android:text="Possible Yields"
-        android:textColor="@color/red"
-        android:textSize="18sp" />
+            android:id="@+id/calc_possible"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/calc_line"
+            android:layout_centerHorizontal="true"
+            android:padding="10dip"
+            android:text="Possible Expenses"
+            android:textColor="@color/red"
+            android:textSize="18sp" />
 
     <TableLayout
         android:layout_width="match_parent"
@@ -114,6 +97,7 @@
                 android:text="Expenses"
                 android:textColor="#000"
                 android:textSize="16dp" />
+
             <TextView
 
                 android:id="@+id/table_qty"
@@ -143,34 +127,35 @@
             android:id="@+id/row2"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content">
+
             <TextView
                 android:id="@+id/bags"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="#D2DADD"
                 android:padding="18dip"
-                android:text="Bags"
+                android:text="Bags "
                 android:textColor="#000"
                 android:textSize="16dp" />
 
             <TextView
-                android:id="@+id/table_bag_qty"
+                android:id="@+id/bags_qty"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="#b0b0b0"
                 android:padding="18dip"
-                android:text="1"
+                android:text="9"
                 android:textColor="#000"
                 android:textSize="16dp" />
 
 
             <TextView
-                android:id="@+id/bags2"
+                android:id="@+id/bags_amount"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="#D2DADD"
                 android:padding="18dip"
-                android:text="100"
+                android:text="."
                 android:textColor="#000"
                 android:textSize="16dp" />
         </TableRow>
@@ -180,6 +165,7 @@
             android:id="@+id/row3"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content">
+
             <TextView
 
                 android:id="@+id/seeds"
@@ -193,24 +179,24 @@
 
             <TextView
 
-                android:id="@+id/table_seeds_qty"
+                android:id="@+id/seeds_qty"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="#b0b0b0"
                 android:padding="18dip"
-                android:text="0.5 batch"
+                android:text="4.5 batches"
                 android:textColor="#000"
                 android:textSize="16dp" />
 
 
             <TextView
 
-                android:id="@+id/seed2"
+                android:id="@+id/seeds_amount"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="#D2DADD"
                 android:padding="18dip"
-                android:text="3000"
+                android:text=".."
                 android:textColor="#000"
                 android:textSize="16dp" />
         </TableRow>
@@ -233,24 +219,24 @@
 
             <TextView
 
-                android:id="@+id/table_cotton_qty"
+                android:id="@+id/cotton_qty"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="#b0b0b0"
                 android:padding="18dip"
-                android:text="1.5 kg"
+                android:text="13.5 kg"
                 android:textColor="#000"
                 android:textSize="16dp" />
 
 
             <TextView
 
-                android:id="@+id/cotton2"
+                android:id="@+id/cotton_amount"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="#D2DADD"
                 android:padding="18dip"
-                android:text="5000"
+                android:text=".."
                 android:textColor="#000"
                 android:textSize="16sp" />
         </TableRow>
@@ -260,7 +246,7 @@
 
     <TextView
 
-        android:id="@+id/calc_total"
+        android:id="@+id/calc_total_yeilds"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/calc_table"
@@ -273,7 +259,7 @@
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:id="@+id/calc_line2"
-        android:layout_below="@id/calc_total"
+        android:layout_below="@id/calc_total_yeilds"
         android:background="@color/colorGreen" />
 
     <TextView
@@ -281,7 +267,7 @@
         android:id="@+id/est_income"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/calc_total"
+        android:layout_below="@+id/calc_total_yeilds"
         android:layout_alignParentLeft="true"
         android:padding="18dip"
         android:text="Estimated income :"
@@ -296,7 +282,7 @@
         android:layout_alignBaseline="@+id/est_income"
         android:layout_alignParentRight="true"
         android:padding="18dip"
-        android:text="3"
+        android:text=".."
         android:textColor="#fff"
         android:textSize="16sp" />
 
@@ -320,13 +306,9 @@
         android:layout_alignBaseline="@+id/est_profit"
         android:layout_alignParentRight="true"
         android:padding="18dip"
-        android:text="200K"
+        android:text=".."
         android:textColor="#fff"
         android:textSize="16sp" />
 
-
-
-
-
-
-</RelativeLayout>
+    </RelativeLayout>
+</ScrollView>
