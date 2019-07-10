@@ -21,6 +21,7 @@
         </activity>
         <activity android:name=".ResultsActivity" />
         <activity android:name=".Main3Activity" />
+        <activity android:name=".tensor.TensorActivity" />
         <activity android:name=".CalcuraterActivity" />
         <activity android:name=".Main5Activity" />
     </application>

@@ -18,9 +18,13 @@ import android.view.MenuInflater;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+
+import com.example.okker.nkulimax.tensor.TensorActivity;
+
 import java.io.File;
 import java.io.FileDescriptor;
 import java.io.IOException;
+import java.net.Inet4Address;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
@@ -54,6 +58,8 @@ public class MainActivity extends AppCompatActivity {
         goBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Intent tensorIntent = new Intent(MainActivity.this, TensorActivity.class);
+                startActivity(tensorIntent);
             }
         });
     }
