@@ -18,8 +18,6 @@ import android.view.MenuInflater;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
-
-import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.FileDescriptor;
 import java.io.IOException;
@@ -27,9 +25,8 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class MainActivity extends AppCompatActivity {
-    private Main2Activity main2Activity;
-    Button btn;
-    Button but;
+    Button diagnosisBtn;
+    Button goBtn;
     ImageView img;
     private Uri file;
 
@@ -38,13 +35,27 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        btn=(Button)findViewById(R.id.button2);
-        but=(Button)findViewById(R.id.but);
+        diagnosisBtn =(Button)findViewById(R.id.diagnose_btn);
+        goBtn=(Button)findViewById(R.id.go_btn);
         img = (ImageView)findViewById(R.id.imageView4);
-        if (ContextCompat.checkSelfPermission(this, Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED) {
-            btn.setEnabled(false);
-            ActivityCompat.requestPermissions(this, new String[] { Manifest.permission.CAMERA, Manifest.permission.WRITE_EXTERNAL_STORAGE }, 0);
-        }
+
+
+        diagnosisBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (ContextCompat.checkSelfPermission(MainActivity.this, Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED) {
+                    diagnosisBtn.setEnabled(false);
+                    ActivityCompat.requestPermissions(MainActivity.this, new String[] { Manifest.permission.CAMERA, Manifest.permission.WRITE_EXTERNAL_STORAGE }, 0);
+                }
+
+                goToActivity2();
+            }
+        });
+        goBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+            }
+        });
     }
 
 
@@ -58,14 +69,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-
-
-
-
-
-    public void press(View view){
-        Intent intent = new Intent(this, Main2Activity.class);
-        startActivity(intent);
+    public void gotoresults(){
+        Intent resultintent = new Intent(MainActivity.this, ResultsActivity.class);
+        startActivity(resultintent);
     }
 
     public void how(View view){
@@ -83,19 +89,19 @@ public class MainActivity extends AppCompatActivity {
         if (requestCode == 0) {
             if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED
                     && grantResults[1] == PackageManager.PERMISSION_GRANTED) {
-                btn.setEnabled(true);
+                diagnosisBtn.setEnabled(true);
             }
         }
     }
 
-    public void goToActivity2(View view){
-//        Intent intent = new Intent(this, Main2Activity.class);
-//        startActivity(intent);
-    Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-    file = Uri.fromFile(getOutputMediaFile());
-    intent.putExtra(MediaStore.EXTRA_OUTPUT, file);
+    public void goToActivity2(){
+        Intent cameraintent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+        file = Uri.fromFile(getOutputMediaFile());
+        cameraintent.putExtra(MediaStore.EXTRA_OUTPUT, file);
 
-    startActivityForResult(intent, 100);
+        startActivityForResult(cameraintent, 100);
+
+
     }
 
     @Override
@@ -105,6 +111,8 @@ public class MainActivity extends AppCompatActivity {
 //                img.setImageURI(file);
 
                 uriToBitmap(file);
+                Intent resultIntent = new Intent(MainActivity.this, ResultsActivity.class);
+                startActivity(resultIntent);
             }
         }
     }

@@ -19,10 +19,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Main2Activity" />
+        <activity android:name=".ResultsActivity" />
         <activity android:name=".Main3Activity" />
         <activity android:name=".CalcuraterActivity" />
-        <activity android:name=".Main5Activity"></activity>
+        <activity android:name=".Main5Activity" />
     </application>
 
 </manifest>

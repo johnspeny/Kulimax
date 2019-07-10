@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">kulimax</string>
+    <string name="app_name">Kulimax</string>
     <string name="button1_name">Diagonise</string>
     <string name="mushroom_plant">Mushroom Plant</string>
     <string name="farm_calculator">Farm Calculator</string>
@@ -14,4 +14,6 @@
     <string name="how_to_start4">3) Start growing</string>
     <string name="how_to_start44">Deposit money then farm equipments(number of seeds, cotton size) are delivered to you.</string>
 
+    <string name="toggle_camera">Toggle Camera</string>
+    <string name="detect_object">Detect Object</string>
 </resources>
