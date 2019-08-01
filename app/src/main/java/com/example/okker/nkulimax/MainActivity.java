@@ -30,7 +30,6 @@ import java.util.Date;
 
 public class MainActivity extends AppCompatActivity {
     Button diagnosisBtn;
-    Button goBtn;
     ImageView img;
     private Uri file;
 
@@ -40,7 +39,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         diagnosisBtn =(Button)findViewById(R.id.diagnose_btn);
-        goBtn=(Button)findViewById(R.id.go_btn);
         img = (ImageView)findViewById(R.id.imageView4);
         //getSupportActionBar().setIcon(R.mipmap.ic_kulimax_logo);
 
@@ -50,17 +48,6 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent tensorIntent = new Intent(MainActivity.this, TensorActivity.class);
                 startActivity(tensorIntent);
-            }
-        });
-        goBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (ContextCompat.checkSelfPermission(MainActivity.this, Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED) {
-                    diagnosisBtn.setEnabled(false);
-                    ActivityCompat.requestPermissions(MainActivity.this, new String[] { Manifest.permission.CAMERA, Manifest.permission.WRITE_EXTERNAL_STORAGE }, 0);
-                }
-
-                goToActivity2();
             }
         });
     }

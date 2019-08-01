@@ -65,9 +65,9 @@
                                       <entry key="backgroundAssetType" value="COLOR" />
                                       <entry key="backgroundColor" value="ffffff" />
                                       <entry key="backgroundLayerName" value="ic_launcher_background" />
-                                      <entry key="foregroundImage" value="C:\Users\Hunter\Downloads\Kulimax logo.png" />
+                                      <entry key="foregroundImage" value="C:\Users\Hunter\Downloads\kulimax icon.png" />
                                       <entry key="foregroundLayerName" value="ic_launcher_foreground" />
-                                      <entry key="outputName" value="ic_kulimax_logo" />
+                                      <entry key="outputName" value="ic_kulimax_icon" />
                                     </map>
                                   </option>
                                 </PersistentState>
