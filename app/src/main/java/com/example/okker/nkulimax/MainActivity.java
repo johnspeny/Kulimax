@@ -42,6 +42,7 @@ public class MainActivity extends AppCompatActivity {
         diagnosisBtn =(Button)findViewById(R.id.diagnose_btn);
         goBtn=(Button)findViewById(R.id.go_btn);
         img = (ImageView)findViewById(R.id.imageView4);
+        //getSupportActionBar().setIcon(R.mipmap.ic_kulimax_logo);
 
 
         diagnosisBtn.setOnClickListener(new View.OnClickListener() {

@@ -45,9 +45,9 @@
 
     <Button
         android:id="@+id/btnToggleCamera"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="bottom|center"
+        android:layout_gravity="bottom|left"
         android:layout_marginBottom="55dp"
         android:padding="18dip"
         android:layout_marginLeft="@dimen/activity_horizontal_margin"
