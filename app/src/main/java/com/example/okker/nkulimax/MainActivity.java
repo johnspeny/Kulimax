@@ -47,19 +47,19 @@ public class MainActivity extends AppCompatActivity {
         diagnosisBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Intent tensorIntent = new Intent(MainActivity.this, TensorActivity.class);
+                startActivity(tensorIntent);
+            }
+        });
+        goBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
                 if (ContextCompat.checkSelfPermission(MainActivity.this, Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED) {
                     diagnosisBtn.setEnabled(false);
                     ActivityCompat.requestPermissions(MainActivity.this, new String[] { Manifest.permission.CAMERA, Manifest.permission.WRITE_EXTERNAL_STORAGE }, 0);
                 }
 
                 goToActivity2();
-            }
-        });
-        goBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent tensorIntent = new Intent(MainActivity.this, TensorActivity.class);
-                startActivity(tensorIntent);
             }
         });
     }
