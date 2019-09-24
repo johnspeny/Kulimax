@@ -1,18 +1,18 @@
 <resources>
     <string name="app_name">Kulimax</string>
     <string name="button1_name">Diagonise</string>
-    <string name="mushroom_plant">Mushroom Plant</string>
+    <string name="mushroom_plant">Coffee Plant</string>
     <string name="farm_calculator">Farm Calculator</string>
     <string name="calculator">
-        Enter your farm land size:</string>
-    <string name="how_to_start">1) Find some space</string>
-    <string name="how_to_start2">The size of the space you need depends on lots of factors like how many mushrooms you are aiming to grow.Example:</string>
+        Enter your farm land size</string>
+    <string name="how_to_start">1) Planting</string>
+    <string name="how_to_start2">Coffee seeds are generally planted in large beds in shaded nurseries. Planting often takes place during the wet season, so that the soil remains moist. </string>
 
-    <string name="how_to_start3">2) Design your space</string>
-    <string name="how_to_start33">There are so many different ways of designing your setup depending on the space you have and your budget, but I will show you some examples to help give you the general idea.</string>
+    <string name="how_to_start3">2) Harvesting the Cherries</string>
+    <string name="how_to_start33">It will take approximately 3 to 4 years for the newly planted coffee trees to bear fruit. The coffee cherry, turns a bright, deep red when it is ripe and ready to be harvested.</string>
 
-    <string name="how_to_start4">3) Start growing</string>
-    <string name="how_to_start44">Deposit money then farm equipments(number of seeds, cotton size) are delivered to you.</string>
+    <string name="how_to_start4">3) Processing the Cherries</string>
+    <string name="how_to_start44">Once the coffee has been picked, processing must begin as quickly as possible to prevent fruit spoilage. </string>
 
     <string name="toggle_camera">Toggle Camera</string>
     <string name="detect_object">Diagonise</string>
