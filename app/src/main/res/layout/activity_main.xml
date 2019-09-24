@@ -25,7 +25,7 @@
             android:layout_alignParentTop="true"
             android:adjustViewBounds="true"
             android:contentDescription="@string/button1_name"
-            app:srcCompat="@drawable/mushroom" />
+            app:srcCompat="@drawable/coffee" />
 
 
 
@@ -76,18 +76,18 @@
 
         android:text="How to start"></Button>
 
-    <Button
-        android:id="@+id/button4"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/button3"
-        android:layout_centerHorizontal="true"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="0dp"
-        android:drawableLeft="@drawable/index"
-        android:onClick="farm"
-        android:textColor="@color/red"
-        android:text="Farm Calculator"></Button>
+        <Button
+            android:id="@+id/button4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/button3"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="0dp"
+            android:drawableLeft="@drawable/index"
+            android:onClick="farm"
+            android:text="Farm Calculator"
+            android:textColor="@color/red"></Button>
 
 
 

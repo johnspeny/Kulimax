@@ -54,7 +54,7 @@
                 android:adjustViewBounds="true"
                 android:contentDescription="@string/button1_name"
                 android:scaleType="centerInside"
-                app:srcCompat="@drawable/room" />
+                app:srcCompat="@drawable/planting" />
         </RelativeLayout>
     </android.support.v7.widget.CardView>
 
@@ -104,7 +104,7 @@
                 android:adjustViewBounds="true"
                 android:layout_marginBottom="10dp"
                 android:contentDescription="@string/button1_name"
-                app:srcCompat="@drawable/space" />
+                app:srcCompat="@drawable/coffeecherry" />
         </RelativeLayout>
     </android.support.v7.widget.CardView>
 
@@ -153,7 +153,7 @@
                 android:adjustViewBounds="true"
                 android:layout_marginBottom="10dp"
                 android:contentDescription="@string/button1_name"
-                app:srcCompat="@drawable/oyest" />
+                app:srcCompat="@drawable/coffeeprocessing" />
         </RelativeLayout>
     </android.support.v7.widget.CardView>
 
