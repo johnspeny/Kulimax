@@ -66,4 +66,15 @@
         android:layout_marginRight="@dimen/activity_horizontal_margin"
         android:text="@string/detect_object" />
 
+    <Button
+        android:id="@+id/results_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Results"
+        android:padding="18dip"
+        android:layout_gravity="bottom|right"
+        android:layout_marginBottom="55dp"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"/>
+
 </FrameLayout>

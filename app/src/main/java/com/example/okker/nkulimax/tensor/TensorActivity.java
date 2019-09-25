@@ -1,5 +1,6 @@
 package com.example.okker.nkulimax.tensor;
 
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -10,6 +11,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.okker.nkulimax.R;
+import com.example.okker.nkulimax.ResultsActivity;
 import com.wonderkiln.camerakit.CameraKitError;
 import com.wonderkiln.camerakit.CameraKitEvent;
 import com.wonderkiln.camerakit.CameraKitEventListener;
@@ -33,6 +35,7 @@ public class TensorActivity extends AppCompatActivity {
     private Executor executor = Executors.newSingleThreadExecutor();
     private TextView textViewResult;
     private Button btnDetectObject, btnToggleCamera;
+    private Button resultsBtn;
     private ImageView imageViewResult;
     private CameraView cameraView;
 
@@ -43,6 +46,7 @@ public class TensorActivity extends AppCompatActivity {
         cameraView = findViewById(R.id.cameraView);
         imageViewResult = findViewById(R.id.imageViewResult);
         textViewResult = findViewById(R.id.textViewResult);
+        resultsBtn = findViewById(R.id.results_btn);
         textViewResult.setMovementMethod(new ScrollingMovementMethod());
 
         btnToggleCamera = findViewById(R.id.btnToggleCamera);
@@ -77,6 +81,14 @@ public class TensorActivity extends AppCompatActivity {
             @Override
             public void onVideo(CameraKitVideo cameraKitVideo) {
 
+            }
+        });
+
+        resultsBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent resultsIntent = new Intent(TensorActivity.this, ResultsActivity.class);
+                startActivity(resultsIntent);
             }
         });
 
