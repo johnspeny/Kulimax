@@ -78,18 +78,19 @@
         android:layout_marginTop="10dp"
 
         >
+
         <TextView
             android:id="@+id/textViewA25"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
-            android:drawablePadding="5dp"
-            android:text="Scaliness"
-            android:textColor="@color/red"
             android:layout_marginLeft="10dp"
-            android:drawableLeft="@drawable/bacteria"
-            android:onClick="onClick"
             android:clickable="true"
+            android:drawableLeft="@drawable/bacteria"
+            android:drawablePadding="5dp"
+            android:onClick="onClick"
+            android:text="Phyllosticta coffeicola"
+            android:textColor="@color/red"
             android:textSize="25dp" />
 
         <TextView
